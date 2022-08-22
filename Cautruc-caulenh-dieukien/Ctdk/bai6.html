@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input;
+        input = prompt("Nhập doanh số bán hàng");
+        input = parseInt(input);
+        let money = 0;
+        if(input>=0&&input<=200){
+            money=(input*3)/100;
+        }
+        if(input>=200&&input<=500){
+            money=(input*5)/100;
+        }
+        if(input>=500){
+            money=(input*10)/100;
+        }
+        document.writeln("Số tiền hoa hồng là :"+money);
+    </script>
+</body>
+</html>

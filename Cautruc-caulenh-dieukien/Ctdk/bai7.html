@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let minute;
+        let fee = 25;
+        minute = prompt("Nhập số phút gọi");
+        minute  = parseInt(minute);
+        if(minute<=50&&minute>0){
+            fee = minute*600;
+        }
+        if(minute<=150&&minute>=50){
+            fee = minute*400;
+        }
+        if(minute<=200&&minute>=150){
+            fee = minute*200;
+        }
+        document.writeln("Phí của bạn là:"+fee);
+    </script>
+</body>
+</html>

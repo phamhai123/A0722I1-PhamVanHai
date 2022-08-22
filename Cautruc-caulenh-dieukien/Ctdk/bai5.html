@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a;
+        let b;
+        let c;
+        a = prompt("Nhap diem bai kiem tra :");
+        b = prompt("Nhap diem giua ky :");
+        c = prompt("Nhap diem cuoi ky :");
+        a =parseInt(a);
+        b =parseInt(b);
+        c =parseInt(c);
+        let avera = ((a+b+c)/3);
+        avera = parseFloat(avera);
+        if(a<=10&&b<=10&&c<=10){
+            if(avera>=9){
+                document.writeln(avera+"điểm xếp loại giỏi");
+            }
+            if(avera<9 && avera>=7){
+                document.writeln(avera+"điểm xếp loại khá");
+            }
+            if(avera<7 && avera>=5){
+                document.writeln(avera+"điểm xếp loại trung bình");
+            }
+            if(avera<5){
+                document.writeln(avera+"điểm xếp loại yếu");
+            }
+        }else{
+            document.writeln("Nhập Không đúng")
+        }
+    </script>
+</body>
+</html>
