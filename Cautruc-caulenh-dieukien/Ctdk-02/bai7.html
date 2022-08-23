@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a,b;
+        let x = prompt("Nhập x:");
+        let y = prompt("Nhập y:");
+        let z = prompt("Nhập z:");
+
+        x = parseInt(x);
+        y = parseInt(y);
+        z = parseInt(z);
+        let delta = y*y-4*y*z;
+        
+        if(delta==0){
+            
+            a =-y/(2*x);
+            b =y/(2*x);
+            
+            alert("Phương trình có nghiệm kép")
+        }
+        if(delta<0){
+            alert("Phương trình vô nghiệm");
+        }
+        else{
+            a =(-y-Math.sqrt(delta)/(2*x));
+            b =(-y+Math.sqrt(delta)/(2*x))
+            alert("Phương trình có 2 nghiệm")
+            
+        }
+    </script>
+</body>
+</html>

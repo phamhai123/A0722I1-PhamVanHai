@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = prompt("Nhập tuổi:");
+        age=parseInt(age)
+        if(Number.isInteger(age)&&age>0){
+            console.log(age);
+            if(age>0&&age<120){
+                console.log(age);
+                alert("Là số tuổi của người"+age);
+            }
+        }
+        else{
+            alert("Nhập tuổi sai")
+        }
+        
+    </script>
+</body>
+</html>

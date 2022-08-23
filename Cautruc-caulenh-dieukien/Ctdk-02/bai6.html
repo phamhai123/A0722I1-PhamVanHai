@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Nhập a:");
+        let b = prompt("Nhập b:");
+        a = parseInt(a);
+        b = parseInt(b);
+        if(a==0&&b==0){
+            alert('Phương trình vô số nghiệm');
+        }
+        if(a!=0&&b==0){
+            alert('Phương trình có nghiệm x = 0');
+        }
+        if(a==0&&b!=0){
+            alert('Phương trình vô nghiệm');
+        }else{
+            alert('Phương trình có nghiệm'+ (-b/a));
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sotien = prompt("Nhập số tiền :");
+        sotien = parseInt(sotien);
+        if(sotien>4&&sotien<=6){
+            alert((sotien*5)/100);
+        }
+        else if(sotien<=9){
+            alert((sotien*10)/100);
+        }
+        else if(sotien<=14){
+            alert((sotien*15)/100);
+        }
+        else if(sotien<=24){
+            alert((sotien*20)/100);
+        }
+        else if(sotien<=44){
+            alert((sotien*25)/100);
+        }
+        else if(sotien<=84){
+            alert((sotien*30)/100);
+        }
+        else if(sotien>84){
+            alert((sotien*35)/100);
+        }
+    </script>
+</body>
+</html>
