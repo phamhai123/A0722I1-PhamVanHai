@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function kiem_tra_snt(n){
+          let count = 0;
+          num = Math.floor(Math.sqrt(n));
+          for (let i=1;i<=num;i++){
+            if (n%i ===0){
+              count = count +1;
+            }
+          }
+          return count === 1;
+        }
+        let count=0;
+        let m = 1;
+        while (count<18) {
+          if (kiem_tra_snt(m)){
+            count = count +1;
+            document.write(m+" ");
+          }
+          m = m +1;
+        }
+      </script>
+</body>
+</html>

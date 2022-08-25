@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value;
+        do{
+            value = prompt('Nhập nhiệt độ :');
+            value = parseInt(value);
+            if(value<20){
+               alert('Yêu cầu người dùng tăng nhiệt độ');
+            }
+            else if(value>100){
+                alert('Yêu cầu người dùng giảm nhiệt độ');
+            }
+        }
+        while(value<20||value>100){
+            alert('Nhập đúng');
+        }
+            
+    </script>
+</body>
+</html>
