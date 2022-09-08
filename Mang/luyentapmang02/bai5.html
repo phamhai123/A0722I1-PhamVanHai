@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="value">
+    <button onclick="array_01()">Array(1)</button>
+    <button onclick="array_02()">Array(2)</button>
+    <button onclick="compare()">So sánh</button>
+    <div id="result_1"></div>
+    <div id="result_2"></div>
+    <div id="result_3"></div>
+    <script>
+        let arrA= Array();
+        let arrB= Array();
+        function array_01(){
+            let input = document.getElementById("value").value;
+            arrA.push(input);
+            document.getElementById("result_1").innerText = arrA.join(", ");
+        }
+        function array_02(){
+            let input = document.getElementById("value").value;
+            arrB.push(input);
+            document.getElementById("result_2").innerText = arrB.join(", ");
+        }
+        function compare(){
+            let cout = 0;
+            if(arrA.length==arrB.length){
+                for(i=0;i<arrA.length;i++){
+                    if(arrA[i]==arrB[i]){
+                        cout++;
+                    }
+                }
+                if(cout==arrA.length){
+                    document.getElementById("result_3").innerText = "Hai chuỗi giống nhau";
+                }else{
+                    document.getElementById("result_3").innerText = "Hai chuỗi khác nhau";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

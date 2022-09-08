@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="value">
+    <input type="button" value="Input" onclick="input_array()">
+    <input type="button" value="Search" onclick="search_array()">
+
+    <div id="result"></div>
+    <div id="result2"></div>
+    <script>
+        let array = Array();
+        function input_array(){
+            let value = document.getElementById("value").value;
+            array.push(value);
+            document.getElementById("result").innerText = array.join(", ");
+        }
+        function search_array(){
+            let search = document.getElementById("value").value;
+            let result = "";
+            for(i=0;i<array.length;i++){
+                if(search == array[i]){
+                    result = search;
+                    document.getElementById("result2").innerHTML = search +"is in the array";
+                    break;
+                }
+            }
+            if(result==""){
+                document.getElementById("result2").innerHTML = search +"is not in the array";
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- pham vi của biến -->
+<!-- scop -->
+<!-- concat -->
+<!-- includes -->
+<!-- indexOF -->

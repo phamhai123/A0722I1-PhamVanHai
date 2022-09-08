@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = window.prompt();
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+        console.log(UPPER.indexOf(str[x]));
+        for(let x=0; x<str.length; x++)
+        {
+            if(UPPER.indexOf(str[x]) !== -1)
+            {
+            result.push(str[x].toLowerCase());
+            }
+            else if(LOWER.indexOf(str[x]) !== -1)
+            {
+            result.push(str[x].toUpperCase());
+            }
+            else 
+            {
+            result.push(str[x]);
+            }
+        }
+        alert(result.join(''));
+    </script>
+</body>
+</html>

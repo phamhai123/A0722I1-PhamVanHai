@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number">
+    <button onclick="input_array()">input</button>
+    <button onclick="delete_element()">delete</button>
+    <div id="result"></div>
+    <script>
+        let array = Array();
+        function input_array(){
+            let input = document.getElementById("number").value;
+            array.push(input);
+            document.getElementById("result").innerText = array.join(", ");
+        }
+        function delete_element(){
+            let v = document.getElementById("number").value;
+            for(i=0;i<array.length;i++){
+                if(v == array[i]){
+                    array.splice(i,1);
+                }
+            }
+            document.getElementById("result").innerText = array.join(", ");
+        }
+    </script>
+</body>
+</html>

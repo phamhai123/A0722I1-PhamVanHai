@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JS Bin</title>
+    <style>
+        body {padding-top:50px}
+     </style>
+</head>
+<body>
+    <input type="text" id="txtValue"/>
+    <input type="button" id="btnAdd" value="Add" onclick="input_array();"/>
+    <input type="button" id="btnInvert" value="Invert" onclick="invert_array()">
+    <div id="result"></div>
+    <script>
+        let array = Array();
+        function input_array(){
+            let value = document.getElementById("txtValue").value;
+            array.push(value);
+            document.getElementById("result").innerText = array.join(", ");
+        }
+        function invert_array(){
+            let first = 0;
+            let last = array.length - 1;
+            while (first < last) {
+                let b = array[first];
+                array[first] = array[last];
+                array[last] = b;
+                first++;
+                last--;
+            }
+            document.getElementById("result").innerHTML = array;
+        }
+    </script>
+</body>
+
+</html>

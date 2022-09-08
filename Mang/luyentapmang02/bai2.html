@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="value">
+    <button onclick="input_array()">input</button>
+    <button onclick="reverse()">reverse</button>
+    <div id="result"></div>
+    <script>
+        let array = Array();
+        function input_array(){
+            let input = document.getElementById("value").value;
+            array.push(input);
+            document.getElementById("result").innerText = array.join(", ");  
+        }
+        function reverse(){ 
+            // document.getElementById("result").innerText = array.reverse();
+            let newArray = [];
+            for(i=array.length;i>=0;i--){
+                newArray.push(array[i]);
+            }
+            document.getElementById("result").innerText = newArray.join(", ");
+        }
+    </script>
+</body>
+</html>

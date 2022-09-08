@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num" type="text">
+    <button onclick="arr()">click</button>
+    <p>Kết quả</p>
+    <p id="output"></p>
+    <script>
+        function arr(){
+            let num = window.document.getElementById("num");
+            let str = num.toString();
+            let result = [str[0]];
+            
+            for(let x=1; x<str.length; x++)
+            {
+                if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+                {
+                result.push('-', str[x]);
+                }
+                else
+                {
+                result.push(str[x]);
+                }
+            }
+            document.getElementById("output").innerHTML = result.join('');
+        }
+        </script>
+</body>
+</html>

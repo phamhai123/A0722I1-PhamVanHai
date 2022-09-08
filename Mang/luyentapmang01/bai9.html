@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="value">
+    <button onclick="array_a()">Aray(A)</button>
+    <button onclick="array_b()">Array(B)</button>
+    <button onclick="connect()">Array(C)</button>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <script>
+        let a = new Array();
+        let b = new Array();
+        let c = new Array();
+        function array_a(){
+            let input = document.getElementById("value").value;
+            a.push(input);
+            document.getElementById("result1").innerText = a.join(", ");
+        }
+        function array_b(){
+            let input = document.getElementById("value").value;
+            b.push(input);
+            document.getElementById("result2").innerText = b.join(", ");
+        }
+        function connect(){
+            let c = a.concat(b);
+            document.getElementById("result3").innerText = c.join(", ");
+        }
+        
+    </script>
+</body>
+</html>

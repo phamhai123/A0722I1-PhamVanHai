@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>English</th>
+            <th>Vietnamese</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="eng"></td>
+            <td><input type="text" id="vn"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="arr()">Dịch</button></td>
+        </tr>
+    </table>
+    <script>
+        function arr(){
+            let a = ["cat","dog","chicken","lion"];
+            let b = ["mèo","chó","gà","sư tử"];
+            
+            for(let i=0; i<a.length;i++){
+                if(document.getElementById("eng").value==a[i]){
+                    document.getElementById("vn").value = b[i];
+                }
+                if(document.getElementById("vn").value==b[i]){
+                            document.getElementById("eng").value = a[i];        
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>
