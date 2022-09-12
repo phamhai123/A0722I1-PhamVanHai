@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button onclick="array()">input</button>
+<button onclick="reverse()">reverse</button>
+<div id="result"></div>
+<body>
+    <script>
+        let arr = Array();
+        function array(){
+            let len = parseInt(prompt("Nhập số phần tử mảng:"));
+            let a;
+            for(i=0;i<len;i++){
+                a = parseInt(prompt("Nhập:"));
+                arr.push(a);
+            }
+            document.getElementById("result").innerHTML=arr.join(", ")
+        }
+        function reverse(){
+            arr.reverse();
+            document.getElementById("result").innerHTML=arr.join(", ")
+        }
+    </script>
+</body>
+</html>

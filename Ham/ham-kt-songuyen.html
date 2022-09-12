@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="displayPrime()">click me </button>
+<script>
+    function isPrime(number){
+        let flag = true;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (flag) {
+                if(number% i === 0) {
+                    flag = false;
+                }
+            }
+        }
+        return flag;
+    }
+    function displayPrime(){
+        let count = 0;
+        let arr = "";
+        let a = 2;
+        while(count < 10000){
+            if(isPrime(a)){
+                count++;
+                arr+=a+" ";
+            }
+            a++;
+        }
+        alert(arr);
+    }
+    </script>
+</body>
+</html>

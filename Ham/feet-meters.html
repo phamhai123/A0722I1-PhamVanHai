@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="footToMeet()">foot to meter</button>
+    <button onclick="meterToFoot()">meter to foot</button>
+    <table>
+        <tr>
+            <th>
+                Feet
+            </th>
+            <th>
+                Meter
+            </th>
+        </tr>
+        <tr>
+            <td><span id="outputFeet"></span></td>
+            <td><span id="outputMeter"></span></td>
+        </tr>
+    </table>
+    <script>
+        
+        function footToMeet(foot){
+            foot = document.getElementById("input").value;
+            document.getElementById("ouputFeet").innerHTML = foot;
+            document.getElementById("outputMeter").innerHTML = 0.305 * foot;   
+        }
+        function meterToFoot(meter){
+            meter = document.getElementById("input").value;
+            document.getElementById("ouputFeet").innerHTML = 3.279 * meter;
+            document.getElementById("outputMeter").innerHTML = meter;      
+        }
+        
+    </script>
+</body>
+</html>

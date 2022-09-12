@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="main()">bai2</button>
+    <script>
+        let r;
+        function circleArea(area){
+            area = 3,14*(Math.pow(r,2));
+            console.log(area)
+            alert("Diện tích hình tròn :"+area);
+            return area;    
+        }
+        function diameteCircle(dia){
+            dia = (Math.pow(r,2))*3,14;
+            alert("Chu vi hình tròn");
+            return dia;
+        }
+        function main(){
+            r = parseInt(prompt("Nhập r"));
+            circleArea(area);
+            diameteCircle(dia);
+        }
+    </script>
+</body>
+</html>
