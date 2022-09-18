@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200px" height="300px" style="border:1px solid #d3d3d3;">
+        <script>
+            function Rectangle(width,height){
+                this.width = width;
+                this.height = height;
+                this.getArea = function(){
+                    return width * height;
+                }
+                this.getCircuit = function(){
+                    return (width+height)*2;
+                }
+            }
+            function createRectangle(){
+                let c = document.getElementById("myCanvas");
+                let ctx = c.getContext("2d");
+                ctx.fillStyle="pink";
+                ctx.fillRect(20,20,rectangle.width, rectangle.height);
+            }
+            let rectangle = new Rectangle(100,120);
+            let circuit = rectangle.getCircuit();
+            let area = rectangle.getArea();
+            alert("Chu vi hình chữ nhật :"+circuit);
+            alert("Diện tích hình chữ nhật :"+area);
+            createRectangle();
+    
+        </script>
+        
+</body>
+</html>

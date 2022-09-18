@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class Temperature{
+        //     constructor(c){
+        //         this.c = c;
+        //     }
+        //     getConvertF(){
+        //         return 1,8*c+32;
+        //     }
+        //     getKenvin(){
+        //         return k -273,15;
+        //     }
+        // }
+        function Temperature(c){
+            this.c = c;
+            this.getConvertF = function(){
+                return 1,8*c+32;
+            }
+            this.getConvertK = function(){
+                return c+273,15;
+            }
+        }
+        
+        let temperature = new Temperature(25);
+        let f = temperature.getConvertF();
+        let k = temperature.getConvertK();
+        alert("Nhiệt độ F là: "+f);
+        alert("Nhiệt độ K là "+k);
+    </script>
+</body>
+</html>
